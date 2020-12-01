@@ -1,0 +1,44 @@
+body{
+    background: url(../Imagenes/Background.jpg) no-repeat center fixed;
+    background-size: cover;
+
+    
+}
+.main-section{
+    margin: 0 auto;
+    margin-top: 30%; 
+    padding: 0;
+}
+
+.modal-content{
+    background-color: rgba(25, 36, 71, 0.616);
+    opacity: .95;
+    padding: 20px 20px;
+}
+
+.form-group input{
+    height: 42px; 
+    font-size: 18px;
+    border: 0;
+    padding: 10px;
+    margin: 6px;
+}
+
+button{
+    width: 60%;
+}
+
+.btnRecordarContrasena{
+    color: white;
+}
+
+#logoTelecom{
+    width: 140px;
+    height: 60px;
+    
+}
+#btnRegistrarse{
+    width: 120px;
+    font-size: 18px;
+    padding: 5px;
+}
