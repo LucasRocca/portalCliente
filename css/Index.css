@@ -1,0 +1,31 @@
+
+body{
+    background-color: rgba(113, 145, 173, 0.212);     
+}
+
+/* Nav */
+
+nav{
+    opacity: .93;
+}
+
+#logoTelecom{
+    width: 140px;
+    height: 60px;
+}
+
+.nav-item{
+    margin-top: 20px;
+}
+/* body */
+
+.parrafo{
+    margin: 15px 15px;
+}
+
+/* footer */
+footer div{
+   text-align: center;
+   border-top: 1px solid rgba(17, 17, 17, 0.486);
+   padding-top: 10px;
+}
