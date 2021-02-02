@@ -29,3 +29,22 @@ footer div{
    border-top: 1px solid rgba(17, 17, 17, 0.486);
    padding-top: 10px;
 }
+
+h1{
+    text-align: center;
+}
+
+#formPlanilla{
+    border-style: solid;
+    margin: auto 80px;
+    padding: 25px;
+    font-size: 20px;
+}
+#btnEnviar{
+    margin-bottom: 20px; 
+    margin-top: 30px;
+    margin-left: 40%;
+    width: 200px;
+    font-size: 22px;
+
+}

@@ -16,7 +16,7 @@
         <header> 
             <nav class="nav justify-content-end bg-dark">
                     <div>
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="../html/Index.html">
                             <img src="../Imagenes/Logos/logoTelecom.png" alt="Internet Telecom" id="logoTelecom">
                         </a>
                     </div>
@@ -42,48 +42,54 @@
             </nav>  
         </header>
         <section> 
-            <form class="needs-validation">
+          <div>
+            <h1> Complete el formulario para pedir una Linea Nueva </h1>
+          </div>
+            <form class="needs-validation" id="formPlanilla">
+              <div class="container">
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label for="validationTooltip01">Nombre</label>
-                    <input type="text" class="form-control" value="" placeholder="Nombre de usuario" required>
+                    <label for="validationTooltip01">Nombre completo del titular</label>
+                    <input type="text" class="form-control" value="" placeholder="Nombre Apellido" required>
                   </div>
                   <div class="col-md-6 mb-3">
-                    <label for="validationTooltip02">Last name</label>
-                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-                    <div class="valid-tooltip">
-                      Looks good!
-                    </div>
+                    <label for="validationTooltip03">Fecha de nacimiento</label>
+                    <input type="date" class="form-control" id="validationTooltip03"  placeholder="00/00/00" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label for="validationTooltip03">City</label>
-                    <input type="text" class="form-control" id="validationTooltip03" required>
-                    <div class="invalid-tooltip">
-                      Please provide a valid city.
-                    </div>
+                    <label for="validationTooltip02">CUIL/CUIT</label>
+                    <input type="text" class="form-control" id="validationTooltip02" placeholder="20-404004000-8" required>
                   </div>
-                  <div class="col-md-3 mb-3">
-                    <label for="validationTooltip04">State</label>
-                    <select class="custom-select" id="validationTooltip04" required>
-                      <option selected disabled value="">Choose...</option>
-                      <option>...</option>
-                    </select>
-                    <div class="invalid-tooltip">
-                      Please select a valid state.
-                    </div>
-                  </div>
-                  <div class="col-md-3 mb-3">
-                    <label for="validationTooltip05">Zip</label>
-                    <input type="text" class="form-control" id="validationTooltip05" required>
-                    <div class="invalid-tooltip">
-                      Please provide a valid zip.
-                    </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Numero de celular 1</label>
+                    <input type="number" class="form-control" id="validationTooltip03"  placeholder="3564123123" required>
                   </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit form</button>
-              </form>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip01">Domicilio del titular</label>
+                    <input type="text" class="form-control" value="" placeholder="San Martin 1111" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Numero de celular 2</label>
+                    <input type="number" class="form-control" id="validationTooltip03"  placeholder="3564123123" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">Domicilio a colocar linea nueva</label>
+                    <input type="text" class="form-control" id="validationTooltip02" placeholder="San Martin 0000" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">E-mail</label>
+                    <input type="email" class="form-control" id="validationTooltip02" placeholder="example@gmail.com" required>
+                  </div>
+                </div>
+                <button class="btn btn-primary" id="btnEnviar" type="submit">Enviar</button>
+              </div>
+            </form>
         </section>
     </body>
 </html>
