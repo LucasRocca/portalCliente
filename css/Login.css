@@ -4,6 +4,10 @@ body{
 
     
 }
+nav h1{
+    color: rgba(49, 146, 190, 0.568); 
+    font-family:sans-serif;
+}
 .main-section{
     margin: 0 auto;
     margin-top: 30%; 
@@ -32,11 +36,6 @@ button{
     color: white;
 }
 
-#logoTelecom{
-    width: 140px;
-    height: 60px;
-    
-}
 #btnRegistrarse{
     width: 120px;
     font-size: 18px;
