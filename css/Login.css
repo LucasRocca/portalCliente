@@ -41,3 +41,10 @@ button{
     font-size: 18px;
     padding: 5px;
 }
+
+h1{
+    text-align: center;
+    color: rgba(28, 139, 84, 0.747);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 2px black;
+}
