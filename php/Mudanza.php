@@ -3,36 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-     <!-- Coneccion a bootstrap -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-     <link rel="stylesheet" type="text/css" href="../css/Index.css"> 
-     <link rel="stylesheet" type="text/css" href="../css/normalize.css"> 
+    <!-- Coneccion a bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/Index.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css"> 
 
-     <title>Baja de Servicio - LOADING</title>
-
+    <title>Mudanza - LOADING</title>
 </head>
 <body>
     <header> 
       <nav class="nav bg-dark">
             <div>
-                <a class="navbar-brand" href="../html/Index.html">
+                <a class="navbar-brand" href="../php/Index.php">
                   <img src="../Imagenes/Logos/loading.png" alt="LOADING" id="logoLoading">
                 </a>
             </div>
             <div>
-              <ul class="nav nav-tabs justify-content">
-                  <li class="nav-item">
-                   <a class="nav-link" href="../html/LineaNueva.html">Linea nueva</a>
+            <ul class="nav nav-tabs justify-content">
+                  <li class="nav-item ">
+                   <a class="nav-link" href="../php/LineaNueva.php">Linea nueva</a>
                   </li>
                   <li class="nav-item">
-                   <a class="nav-link" href="../html/CambioPlan.html">Cambio de Plan</a>
+                   <a class="nav-link" href="../php/CambioPlan.php">Cambio de Plan</a>
                   </li>
                   <li class="nav-item">
-                   <a class="nav-link active" href="../html/BajaServicio.html">Baja de Servicio</a>
+                   <a class="nav-link" href="../php/BajaServicio.php">Baja de Servicio</a>
                   </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../html/Mudanza.html">Mudanza</a>
+                      <a class="nav-link active"  href="../php/Mudanza.php">Mudanza</a>
                    </li>
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#" aria-disabled="true">Politica de Privacidad</a>
@@ -43,7 +41,7 @@
         </header>
         <section> 
           <div>
-            <h1> Complete el formulario para pedir una Baja de Servicio </h1>
+            <h1> Complete el formulario para pedir una Mudanza </h1>
           </div>
             <form class="needs-validation" id="formPlanilla">
               <div class="container">
@@ -79,7 +77,7 @@
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label for="validationTooltip02">Domicilio a realizar baja de servicio</label>
+                    <label for="validationTooltip02">Domicilio al que desea mudar el servicio</label>
                     <input type="text" class="form-control" id="validationTooltip02" placeholder="San Martin 0000" required>
                   </div>
                   <div class="col-md-6 mb-3">

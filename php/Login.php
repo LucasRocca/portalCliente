@@ -1,23 +1,69 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    session_start();
+    <!-- Coneccion a bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/Login.css"> 
 
-        require 'database.php';
+    <title>Login</title>
 
-    if (!empty($_POST['email']) && !empty($_POST['password'])){
-        $records = $connection->prepare('SELECT id_user, email, password FROM usuarios WHERE email=:email');
-        $records->bindParam(':email',$_POST['email']);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
+</head>
+<body>
+    <header> 
+        <nav class="navbar bg-dark" style="opacity: .85;">
+            <div>
+                <a class="navbar-brand" href="../php/Login.php">
+                  <img src="../Imagenes/Logos/loading.png" alt="LOADING" id="logoLoading">
+                </a>
+            </div>
+            <h1> ¡ BIENVENIDOS A LOADING ! </h1>
+            <div>
+                <!-- Lograr que desde el boton me envie al formulario de registro.html y active la pagina registro.php -->
+                <form>
+                    <a href="../php/Registro.php">
+                        <button class="btn btn-sm btn-outline-success" type="button" id="btnRegistrarse">Registrarse</button>
+                    </a>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <section> 
+        <div class="modal-dialog text-center" > 
+            <div class="col-sm-8 main-section"> 
+                <div class="modal-content">
+                  <form class="col-12" action="../php/ConnLogin.php" method="POST">
+                       <div class="form-group" id="user-group">
+                           <input type="text" class="from.control"  name="email" placeholder="Email" id="usuario">
+                       </div>
+                       <div class="form-group" id="contrasena-group">
+                        <input type="password" class="from.control"  name="password" placeholder="Contraseña" id="pass">
+                       </div>
+                       <br>
+                       <button type="submit" class="btn btn-primary"> Ingresar </button>
+                   </form>
+                   <br>
+                   <div class="col-12">
+                       <a href="" class="btnRecordarContrasena">Recordar contraseña</a> 
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- conecciones-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
-        $message = '';
+</html>
 
-        //comparo la contrasena del form con la de la db
-        if (count($results) > 0 && password_verify($_POST['password'], $results['password'])){
-            $_SESSION['id_user'] = $results['id'];
-            header('Locationn:  /Loguin.php');
-        }else{
-            $message = 'Los datos ingresados son incorrectos';
-        }
-    }
-?> 
+
+<?php
+ echo "estas dentro del login php";
+?>
+
+

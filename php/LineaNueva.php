@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linea Nueva -  LOADING</title>
     <!-- Coneccion a bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/Index.css"> 
     <link rel="stylesheet" type="text/css" href="../css/normalize.css"> 
 
-    <title>Cambio de Plan - LOADING</title>
+<title>Portal Cliente</title>
+
 </head>
-<body>
+
+  <body>
     <header> 
       <nav class="nav bg-dark">
             <div>
-                <a class="navbar-brand" href="../html/Index.html">
+                <a class="navbar-brand" href="../php/Index.php">
                   <img src="../Imagenes/Logos/loading.png" alt="LOADING" id="logoLoading">
                 </a>
             </div>
             <div>
               <ul class="nav nav-tabs justify-content">
-                  <li class="nav-item">
-                   <a class="nav-link" href="../html/LineaNueva.html">Linea nueva</a>
+                  <li class="nav-item ">
+                   <a class="nav-link active" href="../php/LineaNueva.php">Linea nueva</a>
                   </li>
                   <li class="nav-item">
-                   <a class="nav-link active" href="../html/CambioPlan.html">Cambio de Plan</a>
+                   <a class="nav-link" href="../php/CambioPlan.php">Cambio de Plan</a>
                   </li>
                   <li class="nav-item">
-                   <a class="nav-link" href="../html/BajaServicio.html">Baja de Servicio</a>
+                   <a class="nav-link" href="../php/BajaServicio.php">Baja de Servicio</a>
                   </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../html/Mudanza.html">Mudanza</a>
+                      <a class="nav-link" href="../php/Mudanza.php">Mudanza</a>
                    </li>
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#" aria-disabled="true">Politica de Privacidad</a>
@@ -39,53 +42,56 @@
             </div>
       </nav>  
         </header>
+        
         <section> 
           <div>
-            <h1> Complete el formulario para pedir un Cambio de Plan </h1>
+            <h1> Complete el formulario para pedir una Linea Nueva </h1>
           </div>
-            <form class="needs-validation" id="formPlanilla">
+            <form class="needs-validation" id="formPlanilla" method="POST" action="../php/email.php">
               <div class="container">
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">Nombre completo del titular</label>
-                    <input type="text" class="form-control" value="" placeholder="Nombre Apellido" required>
+                    <input type="text" class="form-control" name="nombre" value="" placeholder="Nombre Apellido" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Fecha de nacimiento</label>
-                    <input type="date" class="form-control" id="validationTooltip03"  placeholder="00/00/00" required>
+                    <input type="date" class="form-control" name="fechaNac" id="validationTooltip03"  placeholder="00/00/00" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">CUIL/CUIT</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="20-404004000-8" required>
+                    <input type="text" class="form-control" name="CUIL" id="validationTooltip02" placeholder="20-404004000-8" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Numero de celular 1</label>
-                    <input type="number" class="form-control" id="validationTooltip03"  placeholder="3564123123" required>
+                    <input type="number" class="form-control" name="numCelular" id="validationTooltip03"  placeholder="3564123123" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">Domicilio del titular</label>
-                    <input type="text" class="form-control" value="" placeholder="San Martin 1111" required>
+                    <input type="text" class="form-control" name="domicilio" value="" placeholder="San Martin 1111" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Numero de celular 2</label>
-                    <input type="number" class="form-control" id="validationTooltip03"  placeholder="3564123123" required>
+                    <input type="number" class="form-control" name="numCelular2" id="validationTooltip03"  placeholder="3564123123" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label for="validationTooltip02">Domicilio a realizar el cambio de plan</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="San Martin 0000" required>
+                    <label for="validationTooltip02">Domicilio a colocar linea nueva</label>
+                    <input type="text" class="form-control" name="domicilioNuevo" id="validationTooltip02" placeholder="San Martin 0000" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">E-mail</label>
-                    <input type="email" class="form-control" id="validationTooltip02" placeholder="example@gmail.com" required>
+                    <input type="email" class="form-control" name="email" id="validationTooltip02" placeholder="example@gmail.com" required>
                   </div>
                 </div>
-              <button class="btn btn-primary" id="btnEnviar" type="submit">Enviar</button>
+                <div>
+                  <button class="btn btn-primary" name="btnEnviar" id="btnEnviar" type="submit">Enviar</button>
+                </div>
             </div>
           </form>
       </section>

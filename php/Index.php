@@ -10,29 +10,30 @@
 
 
     <title>Portal Cliente</title>
+
 </head>
 <body>
     <header> 
         <!-- en el header deberia crear la carpeta partials/header para tener siempre el mismo nav sin copiar codigo -->
             <nav class="nav bg-dark">
                 <div>
-                    <a class="navbar-brand" href="../html/Index.html">
+                    <a class="navbar-brand" href="../css/Index.php">
                         <img src="../Imagenes/Logos/loading.png" alt="LOADING" id="logoLoading">
                     </a>
                 </div>
                 <div>
                     <ul class="nav justify-content">
                         <li class="nav-item">
-                        <a class="nav-link active" href="../html/LineaNueva.html">Linea nueva</a>
+                        <a class="nav-link active" href="../php/LineaNueva.php">Linea nueva</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="../html/CambioPlan.html">Cambio de Plan</a>
+                        <a class="nav-link" href="../php/CambioPlan.php">Cambio de Plan</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="../html/BajaServicio.html">Baja de Servicio</a>
+                        <a class="nav-link" href="../php/BajaServicio.php">Baja de Servicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../html/Mudanza.html">Mudanza</a>
+                            <a class="nav-link" href="../php/Mudanza.php">Mudanza</a>
                             </li>
                         <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Politica de Privacidad</a>
