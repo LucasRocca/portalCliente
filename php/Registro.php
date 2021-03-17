@@ -21,7 +21,7 @@
             <div class="col-sm-8 main-section"> 
                 <div class="modal-content">
 
-                   <form class="col-12" action="../php/ConnRegistro.php" method="POST">
+                   <form class="col-12" action="../php/ConnRegistro.php" href="../Login.php" method="POST">
                        <div class="form-group" id="user-group">
                            <input type="email" class="from.control" name="email" placeholder="Email" id="usuario" required>
                        </div>
@@ -29,7 +29,7 @@
                         <input type="password" class="from.control" name="password" placeholder="Contraseña" id="pass" required>
                        </div>
                        <div class="form-group" id="contrasena-group">
-                        <input type="text" class="from.control" name="confirm_password" placeholder="Confirmar contraseña" id="confirm_pass" required>
+                        <input type="password" class="from.control" name="confirm_password" placeholder="Confirmar contraseña" id="confirm_pass" required>
                        </div>
                        <br>
                        <button type="submit" class="btn btn-primary"> Registrarse </button>
@@ -48,9 +48,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </html>
 
-
-
-<?php
- echo "estas dentro del registro php";
-?>
 

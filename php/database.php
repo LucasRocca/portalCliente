@@ -1,6 +1,7 @@
 <?php
     $server = 'localhost';
     $username = 'root';
+    // como no tengo contraseña para la bd lo dejo en blanco
     $password = '';
     $database = 'portaldb';
 

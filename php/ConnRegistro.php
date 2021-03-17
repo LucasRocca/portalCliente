@@ -5,7 +5,7 @@
 
     if(!empty($_POST['email']) && !empty($_POST['password'])){
         $sql = "INSERT INTO usuarios (email, password) VALUES (:email, :password)";
-        // stament ejecuta el metodo prepare para pasar la consulta SQL
+        // stament ejecuta el metodo "prepare"  que pasa la consulta SQL a la bd
         $stmt = $connection->prepare($sql);
         //vinculamos los parametros
         $stmt->bindParam(':email',$_POST['email']); 
