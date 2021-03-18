@@ -41,7 +41,7 @@
                 </ul>
             </div>
       </nav>  
-        </header>
+    </header>
         
         <section> 
           <div>
@@ -52,7 +52,7 @@
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">Nombre completo del titular</label>
-                    <input type="text" class="form-control" name="nombre" value="" placeholder="Nombre Apellido" required>
+                    <input type="text" class="form-control" name="nombre" value="" placeholder="Nombre y Apellido" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Fecha de nacimiento</label>
@@ -72,7 +72,7 @@
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">Domicilio del titular</label>
-                    <input type="text" class="form-control" name="domicilio" value="" placeholder="San Martin 1111" required>
+                    <input type="text" class="form-control" name="domicilio1" value="" placeholder="San Martin 1111">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Numero de celular 2</label>
@@ -82,7 +82,7 @@
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">Domicilio a colocar linea nueva</label>
-                    <input type="text" class="form-control" name="domicilioNuevo" id="validationTooltip02" placeholder="San Martin 0000" required>
+                    <input type="text" class="form-control" name="domicilio" id="validationTooltip02" placeholder="San Martin 0000" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">E-mail</label>

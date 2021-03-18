@@ -40,56 +40,60 @@
                 </ul>
             </div>
       </nav>  
-        </header>
+    </header>
+
         <section> 
           <div>
             <h1> Complete el formulario para pedir una Baja de Servicio </h1>
           </div>
-            <form class="needs-validation" id="formPlanilla">
+          <form class="needs-validation" id="formPlanilla" method="POST" action="../php/email.php">
               <div class="container">
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">Nombre completo del titular</label>
-                    <input type="text" class="form-control" value="" placeholder="Nombre Apellido" required>
+                    <input type="text" class="form-control" name="nombre" value="" placeholder="Nombre y Apellido" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Fecha de nacimiento</label>
-                    <input type="date" class="form-control" id="validationTooltip03"  placeholder="00/00/00" required>
+                    <input type="date" class="form-control" name="fechaNac" id="validationTooltip03"  placeholder="00/00/00" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">CUIL/CUIT</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="20-404004000-8" required>
+                    <input type="text" class="form-control" name="CUIL" id="validationTooltip02" placeholder="20-404004000-8" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Numero de celular 1</label>
-                    <input type="number" class="form-control" id="validationTooltip03"  placeholder="3564123123" required>
+                    <input type="number" class="form-control" name="numCelular" id="validationTooltip03"  placeholder="3564123123" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip01">Domicilio del titular</label>
-                    <input type="text" class="form-control" value="" placeholder="San Martin 1111" required>
+                    <input type="text" class="form-control" name="domicilio1" value="" placeholder="San Martin 1111">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Numero de celular 2</label>
-                    <input type="number" class="form-control" id="validationTooltip03"  placeholder="3564123123" required>
+                    <input type="number" class="form-control" name="numCelular2" id="validationTooltip03"  placeholder="3564123123" required>
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">Domicilio a realizar baja de servicio</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="San Martin 0000" required>
+                    <input type="text" class="form-control" name="domicilio" id="validationTooltip02" placeholder="San Martin 0000" required>
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip02">E-mail</label>
-                    <input type="email" class="form-control" id="validationTooltip02" placeholder="example@gmail.com" required>
+                    <input type="email" class="form-control" name="email" id="validationTooltip02" placeholder="example@gmail.com" required>
                   </div>
                 </div>
-              <button class="btn btn-primary" id="btnEnviar" type="submit">Enviar</button>
+                <div>
+                  <button class="btn btn-primary" name="btnEnviar" id="btnEnviar" type="submit">Enviar</button>
+                </div>
             </div>
           </form>
+         
       </section>
       <footer>
         <div> 
