@@ -1,3 +1,19 @@
+<?php /*
+    session_start(); 
+    require 'database.php';
+
+    if (isset($_SESSION['id_user'])) {
+        $records = $connection->prepare('SELECT id, email, password FROM usuarios WHERE id= :id');
+        $records->bindParam(':id', $_SESSION['id_user']); 
+        $records->execute();
+        $results = $records->fetch(PDO::FETCH_ASSOC);
+
+        if(count($results) > 0){
+            $user = $results;
+        }
+    } */
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,7 +126,7 @@
             </p>
         </div>
     </footer>
-    
+
 </body>
 <!-- conectar a Jquery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

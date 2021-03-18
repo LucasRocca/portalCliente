@@ -1,3 +1,34 @@
+<?php
+    
+    session_start();
+
+      require 'database.php';
+
+    if (!empty($_POST['email']) && !empty($_POST['password'])){
+        $records = $connection->prepare('SELECT id_user, password, email FROM usuarios WHERE email=:email');
+        //comparo los datos con los de la bd
+        $records->bindParam(':email', $_POST['email']);
+        //ejecuto consulta
+        $records->execute();
+        // results tiene los datos finales de un usuario
+        $results = $records->fetch(PDO::FETCH_ASSOC);
+
+        $message = '';
+
+        //comparo la contrasena del form con la de la db
+        if (count($results) > 0 && password_verify($_POST['password'], $results['password'])){
+            $_SESSION['id_user'] = $results['id'];
+            header('Location:  /portalCliente/php');
+        }else{
+            $message = 'Los datos ingresados son incorrectos';
+        }
+    } 
+?> 
+
+<?php if(!empty($message)): ?>
+        <p> <?= $message ?>
+        <?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +53,7 @@
             </div>
             <h1> ¡ BIENVENIDOS A LOADING ! </h1>
             <div>
-                <!-- Lograr que desde el boton me envie al formulario de registro.html y active la pagina registro.php -->
+                <!-- del boton de registrarse me direcciona a la pagina registro.php -->
                 <form>
                     <a href="../php/Registro.php">
                         <button class="btn btn-sm btn-outline-success" type="button" id="btnRegistrarse">Registrarse</button>
@@ -35,7 +66,7 @@
         <div class="modal-dialog text-center" > 
             <div class="col-sm-8 main-section"> 
                 <div class="modal-content">
-                  <form class="col-12" action="../php/ConnLogin.php" method="POST">
+                  <form class="col-12" action="../php/Login.php" method="POST">
                        <div class="form-group" id="user-group">
                            <input type="text" class="from.control"  name="email" placeholder="Email" id="usuario">
                        </div>
@@ -60,10 +91,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
 </html>
-
-
-<?php
- echo "estas dentro del login php";
-?>
 
 

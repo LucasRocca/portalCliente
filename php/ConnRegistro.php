@@ -1,7 +1,7 @@
-<?php
+<?php /*
     require 'database.php';
 
-    $message = 'se ha registrado correctamente';
+    $message = '';
 
     if(!empty($_POST['email']) && !empty($_POST['password'])){
         $sql = "INSERT INTO usuarios (email, password) VALUES (:email, :password)";
@@ -10,12 +10,16 @@
         //vinculamos los parametros
         $stmt->bindParam(':email',$_POST['email']); 
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-        $stmt->bindParam(':password',$_POST['password']); 
+        $stmt->bindParam(':password', $password); 
 
-        if($stmt->execute()){
+        if($stmt->execute()) {
             $message = 'Usuario creado correctamente' ;
         } else{
             $message = 'Ha ocurrido un error para registrarse como usuario' ;
         }
     }
 ?>
+
+<?php if(!empty($message)): ?>
+        <p> <?= $message ?>
+        <?php endif; */  ?>
