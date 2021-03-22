@@ -86,7 +86,7 @@ function comprobarClave(){
     if (clave1 == clave2){
         alert('Usuario creado correctamente');
     }else{
-        alert("Las dos claves son distintas. \n");
+        alert("Error: las contraseñas no coinciden \n");
     }
 }
 </script> -->

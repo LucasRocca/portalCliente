@@ -21,7 +21,7 @@
             header('Location:  /portalCliente/php');
         }else{
                 echo'<script type="text/javascript">
-                alert("Los datos ingresados son incorrectos");
+                alert("Los datos ingresados son incorrectos \nSi no se encuentra registrado presione en REGISTRARSE");
                 window.location.href="../php/Login.php";
                 </script>';
                 //$message = 'Los datos ingresados son incorrectos' ;

@@ -48,5 +48,4 @@ $mensaje .= "Email: $email ";
 
 //enviar mensaje 
 mail($destinatario, $asunto, $mensaje);
-
 ?>
