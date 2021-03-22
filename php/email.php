@@ -35,7 +35,7 @@ $email = $_POST['email'];
 
 
 //datos para enviar el correo
-$destinatario = "lucaasrocca@gmail.com";
+$destinatario = "lucas.98.rocca@gmail.com";
 $asunto = "Solicitud de atencion LOADING";
 // el slash es para un salto de linea "\"
 $mensaje = "De: $nombre \n";

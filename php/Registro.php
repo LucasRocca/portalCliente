@@ -16,14 +16,14 @@
         if($stmt->execute()) {
             echo'<script type="text/javascript">
             alert("Usuario creado correctamente");
-            window.location.href="../php/Login.php";
+            window.location.href="../php/Index.php";
             </script>';
             //$message = 'Usuario creado correctamente' ;
-            //header("Location: ../php/Login.php");
+            //header("Location: ../php/Index.php");
         }
         /*if (password_verify($password, $passwordConfirm)){
             $message = 'Usuario creado correctamente' ;
-            header("Location: ../php/Login.php");
+            header("Location: ../php/Index.php");
         }else{
             $message = 'Las dos claves son distintas.';
             
@@ -50,6 +50,7 @@
 <body>
 
     <h1>Ingrese sus datos para REGISTRARSE</h1>
+    <a href="../php/Index.php" style="float: right;">Volver</a>
     <section> 
         <div class="modal-dialog text-center" > 
             <div class="col-sm-8 main-section"> 
@@ -72,9 +73,6 @@
             </div>
         </div>
     </section>
-    <footer>
-        <a href="../php/Login.php">Volver</a>
-    </footer>
 </body>
 <!-- <script type="text/javascript">
 

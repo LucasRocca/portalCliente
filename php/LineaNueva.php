@@ -17,7 +17,7 @@
     <header> 
       <nav class="nav bg-dark">
             <div>
-                <a class="navbar-brand" href="../php/Index.php">
+                <a class="navbar-brand" href="../php/Principal.php">
                   <img src="../Imagenes/Logos/loading.png" alt="LOADING" id="logoLoading">
                 </a>
             </div>
