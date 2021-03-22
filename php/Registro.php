@@ -1,7 +1,7 @@
 <?php
     require 'database.php';
 
-    $message = '';
+    $message = '' ;
 
     if(!empty($_POST['email']) && !empty($_POST['password'])){
         $sql = "INSERT INTO usuarios (email, password) VALUES (:email, :password)";
@@ -11,17 +11,27 @@
         $stmt->bindParam(':email',$_POST['email']); 
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $stmt->bindParam(':password', $password); 
+        $passwordConfirm = password_hash($_POST['confirm_password'], PASSWORD_BCRYPT);
 
         if($stmt->execute()) {
-            $message = 'Usuario creado correctamente' ;
+            echo'<script type="text/javascript">
+            alert("Usuario creado correctamente");
+            window.location.href="../php/Login.php";
+            </script>';
+            //$message = 'Usuario creado correctamente' ;
+            //header("Location: ../php/Login.php");
         }
+        /*if (password_verify($password, $passwordConfirm)){
+            $message = 'Usuario creado correctamente' ;
+            header("Location: ../php/Login.php");
+        }else{
+            $message = 'Las dos claves son distintas.';
+            
+        }*/
     }
-?>
-
-<?php if(!empty($message)): ?>
-        <p> <?= $message ?>
+    if(!empty($message)): ?>
+        <p> <?= $message ?> </p>;
         <?php endif; ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +55,7 @@
             <div class="col-sm-8 main-section"> 
                 <div class="modal-content">
 
-                   <form class="col-12" action="../php/Registro.php" href="../Login.php" method="POST">
+                   <form class="col-12" action="../php/Registro.php" method="POST">
                        <div class="form-group" id="user-group">
                            <input type="email" class="from.control" name="email" placeholder="Email" id="usuario" required>
                        </div>
@@ -56,7 +66,7 @@
                         <input type="password" class="from.control" name="confirm_password" placeholder="Confirmar contraseña" id="confirm_pass" required>
                        </div>
                        <br>
-                       <button type="submit" class="btn btn-primary"> Registrarse </button>
+                       <button type="submit" class="btn btn-primary" onClick="comprobarClave()"> Registrarse </button>
                    </form>
                 </div>
             </div>
@@ -66,6 +76,21 @@
         <a href="../php/Login.php">Volver</a>
     </footer>
 </body>
+<!-- <script type="text/javascript">
+
+function comprobarClave(){
+
+    clave1 = document.getElementById('pass')
+    clave2 = document.getElementById('confirm_pass')
+
+    if (clave1 == clave2){
+        alert('Usuario creado correctamente');
+    }else{
+        alert("Las dos claves son distintas. \n");
+    }
+}
+</script> -->
+
 </html>
 <!-- conecciones-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

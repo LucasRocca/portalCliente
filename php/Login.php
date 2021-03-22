@@ -16,11 +16,15 @@
         $message = '';
 
         //comparo la contrasena del form con la de la db
-        if (count($results) > 0 && password_verify($_POST['password'], $results['password'])){
+        if (password_verify($_POST['password'], $results['password']) == true) {
             $_SESSION['id_user'] = $results['id'];
             header('Location:  /portalCliente/php');
         }else{
-            $message = 'Los datos ingresados son incorrectos';
+                echo'<script type="text/javascript">
+                alert("Los datos ingresados son incorrectos");
+                window.location.href="../php/Login.php";
+                </script>';
+                //$message = 'Los datos ingresados son incorrectos' ;
         }
     } 
 ?> 
@@ -68,10 +72,10 @@
                 <div class="modal-content">
                   <form class="col-12" action="../php/Login.php" method="POST">
                        <div class="form-group" id="user-group">
-                           <input type="text" class="from.control"  name="email" placeholder="Email" id="usuario">
+                           <input type="email" class="from.control"  name="email" placeholder="Email" id="usuario" required>
                        </div>
                        <div class="form-group" id="contrasena-group">
-                        <input type="password" class="from.control"  name="password" placeholder="Contraseña" id="pass">
+                        <input type="password" class="from.control"  name="password" placeholder="Contraseña" id="pass" required>
                        </div>
                        <br>
                        <button type="submit" class="btn btn-primary"> Ingresar </button>
