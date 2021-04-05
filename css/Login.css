@@ -1,35 +1,26 @@
 body{
     background: url(../Imagenes/Background.jpg) no-repeat center fixed;
     background-size: cover;
-
-    
 }
 nav h1{
     color: rgba(49, 146, 190, 0.568); 
     font-family:sans-serif;
 }
-.main-section{
-    margin: 0 auto;
-    margin-top: 30%; 
-    padding: 0;
-}
-
 .modal-content{
     background-color: rgba(25, 36, 71, 0.616);
     opacity: .95;
-    padding: 20px 20px;
-}
-
+} 
 .form-group input{
     height: 42px; 
     font-size: 18px;
     border: 0;
     padding: 10px;
     margin: 6px;
-}
+} 
 
 button{
     width: 60%;
+    margin-top: 5px;
 }
 
 .btnRecordarContrasena{
@@ -47,4 +38,6 @@ h1{
     color: rgba(28, 139, 84, 0.747);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     -webkit-text-stroke: 2px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

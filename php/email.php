@@ -19,33 +19,40 @@
                 <h1 style="display: block; text-align: center; font-size: 35px; margin-bottom: 20px;">¡Mail enviado exitosamente!<h1> 
                 <a href="../php" style="display: block; color: #aaf; padding: 10px 30px" > ACEPTAR </a>
             </div>
+            <div>
+            <?php
+                $nombre = $_POST['nombre'];
+                $fechaNac = $_POST['fechaNac'];
+                $CUIL= $_POST['CUIL'];
+                $numCelular = $_POST['numCelular'];
+                $numCelular2 = $_POST['numCelular2'];
+                $domicilio2 = $_POST['domicilio'];
+                $email = $_POST['email'];
+
+
+                //datos para enviar el correo
+                $destinatario = "lucas.98.rocca@gmail.com";
+                $asunto = "Solicitud de atencion LOADING";
+                // el slash es para un salto de linea "\"
+                $mensaje = "De: $nombre \n"; 
+                $mensaje .= "CUIL: $CUIL \n";
+                $mensaje .= "Fecha de Nacimiento: $fechaNac \n";  
+                $mensaje .= "Numero de Celular: $numCelular \n";
+                $mensaje .= "Numero alternativo: $numCelular2 \n";
+                $mensaje .= "Domicilio a asistir: $domicilio2 \n";
+                $mensaje .= "Email: $email ";
+
+                //enviar mensaje 
+                //mail($destinatario, $asunto, $mensaje);
+                ?>
+               
+
+                   <h3> Email: <?php  echo $destinatario ?> </h3>;
+                   <h3> Asunto: <?php  echo $asunto ?> </h3>;
+                   <h3> Mensaje: <br> <?php  echo $mensaje ?> </h3>;
+            </div>
         </section>
     </div>
-</body>
-</html>
-
-<?php
-$nombre = $_POST['nombre'];
-$fechaNac = $_POST['fechaNac'];
-$CUIL= $_POST['CUIL'];
-$numCelular = $_POST['numCelular'];
-$numCelular2 = $_POST['numCelular2'];
-$domicilio2 = $_POST['domicilio'];
-$email = $_POST['email'];
-
-
-//datos para enviar el correo
-$destinatario = "lucas.98.rocca@gmail.com";
-$asunto = "Solicitud de atencion LOADING";
-// el slash es para un salto de linea "\"
-$mensaje = "De: $nombre \n";
-$mensaje .= "CUIL: $CUIL \n";
-$mensaje .= "Fecha de Nacimiento: $fechaNac \n";
-$mensaje .= "Numero de Celular: $numCelular \n";
-$mensaje .= "Numer alternativo: $numCelular2 \n";
-$mensaje .= "Domicilio a asistir: $domicilio2 \n";
-$mensaje .= "Email: $email ";
-
-//enviar mensaje 
-mail($destinatario, $asunto, $mensaje);
-?>
+    <?php 
+        include "../partials/footer.php";
+    ?>

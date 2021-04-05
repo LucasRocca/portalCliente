@@ -32,34 +32,12 @@
     <header> 
         <!-- en el header deberia crear la carpeta partials/header para tener siempre el mismo nav sin copiar codigo -->
             <nav class="nav bg-dark">
+                <?php include '../partials/nav.php' ?>
+
                 <div>
-                    <a class="navbar-brand" href="../css/Principal.php">
-                        <img src="../Imagenes/Logos/loading.png" alt="LOADING" id="logoLoading">
-                    </a>
-                </div>
-                <div>
-                    <ul class="nav justify-content">
+                    <ul class="nav nav-tabs justify-content">
                         <li class="nav-item">
-                        <a class="nav-link active" href="../php/LineaNueva.php">Linea nueva</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="../php/CambioPlan.php">Cambio de Plan</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="../php/BajaServicio.php">Baja de Servicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../php/Mudanza.php">Mudanza</a>
-                            </li>
-                        <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Politica de Privacidad</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Clientes</a>
+                            <a class="nav-link" href="Clientes.php" tabindex="-1" aria-disabled="true">Clientes</a>
                         </li>
                     </ul>
                 </div>
@@ -118,18 +96,6 @@
             </p>
         </div>
     </section>
-    <footer>
-        <div> 
-            <p>
-                Los servicios que presta LOADING están sujetos a disponibilidad técnica y geográfica  <br>
-                Todos los derechos reservados - DIRECCION: Av. San Martin 3569 - Republica Argentina
-            </p>
-        </div>
-    </footer>
-
-</body>
-<!-- conectar a Jquery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-</html>
+    <?php 
+        include "../partials/footer.php";
+    ?>

@@ -1,14 +1,14 @@
 <?php
-    $server = 'localhost';
-    $username = 'root';
-    // como no tengo contraseña para la bd lo dejo en blanco
-    $password = '';
-    $database = 'portaldb';
+    //$server = 'localhost';
+    //$username = 'root';
+    //$password = '';
+    //$database = 'portaldb';
 
-try {
-    $connection = new PDO("mysql:host=$server; dbname=$database;",$username,$password);
-   // echo "se establecio la conexion a la base de datos";
-} catch (PDOException $e) {
-    die('connected failed: '.$e->getMessage());
-}
+    //$connection = new mysqli("mysql:host=$server; dbname=$database;",$username,$password);
+    $mysqli = new mysqli("localhost", "root","","portaldb");
+
+    if ($mysqli->connect_errno) {
+        echo "Falló la conexión a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }else
+        echo "conexion establecida";
 ?>

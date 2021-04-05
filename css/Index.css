@@ -28,6 +28,7 @@ footer div{
    text-align: center;
    border-top: 1px solid rgba(17, 17, 17, 0.486);
    padding-top: 10px;
+   margin-bottom: 0;
 }
 
 h1{
@@ -48,3 +49,4 @@ h1{
     width: 200px;
     font-size: 22px;
 }
+
