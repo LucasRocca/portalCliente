@@ -20,22 +20,22 @@
             <ul class="nav justify-content-center">
                 <li><label > Contactanos tambien por nuestras redes sociales: </label> </li>
                 <li  >
-                    <a href="" class="btn" >
+                    <a href="#" class="btn" >
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="btn">
+                    <a href="#" class="btn">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="btn">
+                    <a href="#" class="btn">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="btn">
+                    <a href="#" class="btn">
                         <i class="far fa-envelope"></i>
                     </a>
                 </li>

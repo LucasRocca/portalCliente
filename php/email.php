@@ -19,7 +19,7 @@
                 <a href="../php/Principal.php" style="display: block; color: #aaf; padding: 10px 30px" > ACEPTAR </a>
             </div>
             <div>
-            <?php
+            <?php   
                 $nombre = $_POST['nombre'];
                 $fechaNac = $_POST['fechaNac'];
                 $CUIL= $_POST['CUIL'];
@@ -28,9 +28,8 @@
                 $domicilio2 = $_POST['domicilio'];
                 $email = $_POST['email'];
 
-
-                //datos para enviar el correo
-                $destinatario = "somos_loading@gmail.com";
+                //$destinatario = "somos_loading@gmail.com";
+                $destinatario = "lucas.98.rocca@gmail.com";
                 $asunto = "Solicitud de atencion LOADING";
                
                 $mensaje = "De: $nombre \n <br>"; 
@@ -40,6 +39,7 @@
                 $mensaje .= "Numero alternativo: $numCelular2 \n <br>";
                 $mensaje .= "Domicilio a asistir: $domicilio2 \n <br>";
                 $mensaje .= "Email: $email ";
+                
                 ?>
 
                    <h3> Email enviado a: <?php  echo $destinatario ?> </h3>;
@@ -47,6 +47,7 @@
                    <h3> Mensaje: <br> <?php  echo $mensaje ?> </h3>;
             </div>
         </section>
+        
     </div>
     <?php 
         include "../partials/footer.php";
