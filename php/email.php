@@ -30,7 +30,7 @@
 
 
                 //datos para enviar el correo
-                $destinatario = "lucas.98.rocca@gmail.com";
+                $destinatario = "somos_loading@gmail.com";
                 $asunto = "Solicitud de atencion LOADING";
                
                 $mensaje = "De: $nombre \n <br>"; 
@@ -40,11 +40,9 @@
                 $mensaje .= "Numero alternativo: $numCelular2 \n <br>";
                 $mensaje .= "Domicilio a asistir: $domicilio2 \n <br>";
                 $mensaje .= "Email: $email ";
-
-                
-                //mail($destinatario, $asunto, $mensaje);
                 ?>
-                   <h3> Email: <?php  echo $destinatario ?> </h3>;
+
+                   <h3> Email enviado a: <?php  echo $destinatario ?> </h3>;
                    <h3> Asunto: <?php  echo $asunto ?> </h3>;
                    <h3> Mensaje: <br> <?php  echo $mensaje ?> </h3>;
             </div>

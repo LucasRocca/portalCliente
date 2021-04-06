@@ -1,9 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- FONT AWESOME 5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="../css/Index.css"> 
+
+    <title>footer</title>
+</head>
+<body>
 <footer>
         <div> 
             <p>
                 Los servicios que presta LOADING están sujetos a disponibilidad técnica y geográfica  <br>
-                Todos los derechos reservados - DIRECCION: Av. San Martin 3569 - Republica Argentina
             </p>
+
+            <ul class="nav justify-content-center">
+                <li><label > Contactanos tambien por nuestras redes sociales: </label> </li>
+                <li  >
+                    <a href="" class="btn" >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="btn">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="btn">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="btn">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
 </footer>
 

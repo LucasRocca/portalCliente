@@ -20,26 +20,26 @@
                 </a>
             </div>
             <div>
-              <ul class="nav nav-tabs justify-content">
-                  <li class="nav-item ">
+              <ul class="row nav justify-content">
+                  <li class="nav-item nav-tabs">
                    <a class="nav-link" href="../php/LineaNueva.php">Linea nueva</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item nav-tabs">
                    <a class="nav-link" href="../php/CambioPlan.php">Cambio de Plan</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item nav-tabs">
                    <a class="nav-link" href="../php/BajaServicio.php">Baja de Servicio</a>
                   </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-tabs">
                       <a class="nav-link" href="../php/Mudanza.php">Mudanza</a>
                    </li>
-                  <li class="nav-item">
+                  <li class="nav-item nav-tabs">
                     <a class="nav-link disabled" href="#" aria-disabled="true">Politica de Privacidad</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item nav-tabs">
                       <a class="nav-link" href="Clientes.php" tabindex="-1" aria-disabled="true">Clientes</a>
                   </li>
-                   <a href="../php/Index.php" class="btn btn-sm btn-outline-success" type="submit" id="btnLogout">Cerrar sesion</a>
+                   <a href="../php/Index.php" class="btn btn-sm btn-outline-success" type="submit" id="btnLogout" style="margin-top:25px; margin-left:300px;">Cerrar sesion</a>
                 </ul>
                
             </div>
