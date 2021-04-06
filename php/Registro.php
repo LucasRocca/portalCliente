@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +8,7 @@
     <!-- Coneccion a bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/Login.css"> 
+    <script type="text/javascript" src=".js" ></script>
  
     <title>Registro</title>
 
@@ -26,7 +25,7 @@
                 <!-- del boton de registrarse me direcciona a la pagina registro.php -->
                 <form>
                     <a href="../php/Index.php">
-                        <button class="btn btn-sm btn-outline-success" type="button" id="btnRegistrarse">Volver</button>
+                        <button class="btn btn-sm btn-outline-primary" type="button" id="btnRegistrarse">Volver</button>
                     </a>
                 </form>
             </div>
@@ -49,12 +48,11 @@
                            <input type="email" class="from.control" name="email" placeholder="Email"  required>
                        </div>
                        <div class="form-group" id="contrasena-group">
-                        <input type="password" class="from.control" name="password" placeholder="Contraseña"  required>
+                        <input type="password" class="from.control" id="pass" name="password" placeholder="Contraseña"  required>
                        </div>
                        <div class="form-group" id="contrasena-group">
-                        <input type="password" class="from.control" name="confirm_password" placeholder="Confirmar contraseña" required>
+                        <input type="password" class="from.control" id="confirm_pass" name="confirm_password" placeholder="Confirmar contraseña" required>
                        </div>
-                       <br>
                        <div> 
                         <button type="submit" name="btnRegistro" class="btn btn-primary" onClick="comprobarClave()"> Registrarse </button>
                        </div>
@@ -63,20 +61,6 @@
             </div>
         </div>
     </section>
-    <!-- <script type="text/javascript">
-
-function comprobarClave(){
-
-    clave1 = document.getElementById('pass')
-    clave2 = document.getElementById('confirm_pass')
-
-    if (clave1 == clave2){
-        alert('Usuario creado correctamente');
-    }else{
-        alert("Error: las contraseñas no coinciden \n");
-    }
-}
-</script> -->
 </body>
 <!-- conectar a Jquery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

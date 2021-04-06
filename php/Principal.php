@@ -33,14 +33,6 @@
         <!-- en el header deberia crear la carpeta partials/header para tener siempre el mismo nav sin copiar codigo -->
             <nav class="nav bg-dark">
                 <?php include '../partials/nav.php' ?>
-
-                <div>
-                    <ul class="nav nav-tabs justify-content">
-                        <li class="nav-item">
-                            <a class="nav-link" href="Clientes.php" tabindex="-1" aria-disabled="true">Clientes</a>
-                        </li>
-                    </ul>
-                </div>
             </nav>  
     </header>
     <section> 

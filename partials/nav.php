@@ -36,7 +36,12 @@
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#" aria-disabled="true">Politica de Privacidad</a>
                   </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Clientes.php" tabindex="-1" aria-disabled="true">Clientes</a>
+                  </li>
+                   <a href="../php/Index.php" class="btn btn-sm btn-outline-success" type="submit" id="btnLogout">Cerrar sesion</a>
                 </ul>
+               
             </div>
       </nav>  
     </header>

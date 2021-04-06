@@ -1,34 +1,33 @@
 <?php
-    
     session_start();
-
     require 'database.php';
 
-    if(isset($_POST['btnRegistro'])){
-        $records = $mysqli->prepare('SELECT email,  password FROM usuarios WHERE email=:email and password=:password');
-        $records->bindParam(':email', $_POST['email']);
-        $records->execute();
-        // results tiene los datos finales de un usuario
-        $results = $records->fetch(PDO::FETCH_ASSOC);
+    if(isset($_POST['btnIngresar'])){
+        
+        $email = $_POST[ 'email'];
+        $password = $_POST['password'];
 
-        $message = '';
+        $consulta = "SELECT email, password FROM usuarios WHERE email = '$email' and password= '$password'";
+        $resultado = mysqli_query($mysqli, $consulta);
+        $row = mysqli_fetch_array($resultado);
+
+        $nombre=$row['nombre'];
+        $cont=mysqli_num_rows($resultado);
+        $id=$row['id_user'];
 
         //comparo la contrasena del form con la de la db
-        if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
-            $_SESSION['id_user'] = $results['id'];
+        if ($cont == 1) {
+            $_SESSION['id_user']=$id;
+            $_SESSION['nombre']=$nombre;
             header('Location:  /portalCliente/php/principal.php');
         }else{
-                echo'<script type="text/javascript">
-                alert("Los datos ingresados son incorrectos \nSi no se encuentra registrado presione en REGISTRARSE");
-                window.location.href="../php/Index.php";
-                </script>';
+            echo'<script type="text/javascript">
+            alert("Los datos ingresados son incorrectos \nSi no se encuentra registrado presione en REGISTRARSE");
+            window.location.href="../php/Index.php";
+            </script>';
         }
     } 
 ?> 
-
-<?php if(!empty($message)): ?>
-        <p> <?= $message ?>
-        <?php endif; ?>
 
 <!DOCTYPE html>
 <html lang="en">
