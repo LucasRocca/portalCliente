@@ -43,9 +43,7 @@
                        </div>
                        <div class="form-group" id="user-group">
                            <input type="num" class="from.control" name="dni" placeholder="DNI"  required>
-                       </div>
-                       <div class="form-group disabled" id="user-group">
-                           <input type="text" class="from.control" name="rol" value="Cliente"  required>
+                           <input type="hidden" name="rol" value="Cliente" >
                        </div>
                        <div class="form-group" id="user-group">
                            <input type="email" class="from.control" name="email" placeholder="Email"  required>

@@ -1,35 +1,12 @@
 <?php 
     include '../php/database.php';
-
-    if (isset($_GET['id_user'])){
-        $id = $_GET['id_user'];
-        $consulta = "SELECT * FROM usuarios WHERE id_user = $id";
-        $resultado = mysqli_query($mysqli, $consulta);
-
-        if(isset($_POST['update'])){
-
-            $nombre = $_POST['nombre'];
-            $dni = $_POST[ 'dni'];
-            $rol = $_POST['rol'];
-            $email = $_POST[ 'email'];
-            $password = $_POST['password'];
-            $confirm_password = $_POST['confirm_password'];
     
-            $consulta = "UPDATE usuarios set id_user = '$id', nombre = '$nombre', dni = '$dni', email = '$email', rol = '$rol',  password = '$password',  confirm_password = '$confirm_password' WHERE id_user = $id";
-            $resultado = mysqli_query($mysqli, $consulta);
-            echo $resultado;
-    
-            if (!$resultado){
-                die("no se pudo modificar el registro");
-            }else{
-                echo'<script type="text/javascript">
-                    alert("Registro modificado correctamente");
-                    window.location.href="../php/Clientes.php";
-                    </script>';
-            }
-        }
-    }
-    
+    $id = ($_GET['id_user']);
+
+    $consulta = "SELECT * FROM usuarios WHERE id_user = $id LIMIT 1";
+    $resultado = mysqli_query($mysqli, $consulta);
+
+    $row = $resultado->fetch_assoc();
 ?>
 <?php include '../partials/nav.php'?>
 
@@ -40,24 +17,23 @@
 <div class="modal-dialog text-center" > 
             <div class="col-sm-8 main-section"> 
                 <div class="modal-content">
-                   <form class="col-12" method="POST" action="../partials/update.php?$id=<?php echo $_GET['id_user']; ?>" >
+                   <form class="col-12" method="POST" action="../partials/update2.php" >
                        <div class="form-group" id="user-group">
-                           <input type="text" class="from.control" name="nombre" placeholder="Nombre y Apellido" required>
+                           <input type="text" class="from.control" name="nombre" value="<?php echo $row['nombre'] ?>" placeholder="Nombre y Apellido" required>
+                           <input type="hidden" id="id" name="id_user" value="<?php echo $row['id_user'] ?>"> 
                        </div>
                        <div class="form-group" id="user-group">
-                           <input type="num" class="from.control" name="dni" placeholder="DNI"  required>
-                       </div>
-                       <div class="form-group disabled" id="user-group">
-                           <input type="text" class="from.control" name="rol" value="Cliente"  required>
+                           <input type="num" class="from.control" name="dni" value="<?php echo $row['dni'] ?>" placeholder="DNI"  required>
+                           <input type="hidden" name="rol" value="Cliente" >
                        </div>
                        <div class="form-group" id="user-group">
-                           <input type="email" class="from.control" name="email" placeholder="Email"  required>
+                           <input type="email" class="from.control" name="email" value="<?php echo $row['email'] ?>" placeholder="Email"  required>
                        </div>
                        <div class="form-group" id="contrasena-group">
-                        <input type="password" class="from.control" name="password" placeholder="Contraseña"  required>
+                        <input type="password" class="from.control" name="password" value="<?php echo $row['password'] ?>" placeholder="Contraseña"  required>
                        </div>
                        <div class="form-group" id="contrasena-group">
-                        <input type="password" class="from.control" name="confirm_password" placeholder="Confirmar contraseña" required>
+                        <input type="password" class="from.control" name="confirm_password" value="<?php echo $row['confirm_password'] ?>" placeholder="Confirmar contraseña" required>
                        </div>
                        <br>
                        <div> 
